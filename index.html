@@ -17,6 +17,32 @@
         <!--[if lt IE 7]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
+
+        <div class="form-container">
+            <form id="add-vinyl-form" style-"">
+                <h2>Add a Vinyl!</h2>
+
+                <input id='input-title' type="text" name="title" value="" placeholder="Album Title" class="input-text">
+                <br><br>
+                <input id='input-artist' type="text" name="artist" value="" placeholder="Artist Name" class="input-text">
+                <br><br>
+                <input id='input-url' type="text" name="image" value="" placeholder="Enter your Album Artwork URL" class="input-text">
+                <br><br>
+
+                <select name="genre" id="genre">
+                    <option value="1">Rock</option>
+                    <option value="2">Jazz</option>
+                    <option value="3">Country</option>
+                </select>
+                <br><br>
+
+                <input id="create-button" type="submit" name="submit" value="Add to Vault" class="submit">
+            </form>
+        </div>
+        <br><br>
+
+        <h1>Vinyl Vault</h1>
+        <div id="vinyl-container"></div>
         
         <script src="" async defer></script>
     </body>
