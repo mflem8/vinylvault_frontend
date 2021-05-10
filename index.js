@@ -2,6 +2,11 @@ const endPoint = "http://localhost:3000/api/v1/vinyls"
 
 document.addEventListener('DOMContentLoaded', () => {
     getVinyls()
+
+    const addVinylForm = document.querySelector("#add-vinyl-form")
+
+    addVinylForm.addEventListener("submit", (e) => createFormHandler(e));
+
 })
 
 function getVinyls() {
@@ -24,4 +29,18 @@ function getVinyls() {
             
         })
     })
+}
+
+function createFormHandler(e) {
+    e.preventDefault()
+    const titleInput = document.querySelector('#input-title').value 
+    const artistInput = document.querySelector('#input-artist').value
+    const imageInput = document.querySelector('#input-url').value 
+    const genreId = parseInt(document.querySelector('#genre').value
+    postFetch(titleInput, artistInput, imageInput, genreId)
+}
+
+function postFetch(title, artist, image_url, genre_id) {
+    console.log(title, artist, image_url, genre_id);
+
 }
